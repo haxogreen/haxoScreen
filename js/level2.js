@@ -47,7 +47,7 @@ function reloadPage() {
 function refreshTime() {
 
     $('.time').text( moment().format('HH:mm:ss') );
-    $('.date').text( moment().format('dddd, Do \of MMMM') );
+    $('.date').text( moment().format('ddd, Do \of MMMM') );
 
 }
 
