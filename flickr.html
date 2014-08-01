@@ -12,6 +12,20 @@
         <link rel="stylesheet" href="css/level2.css" />
         <meta name="viewport" content="initial-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes">
+        <META HTTP-EQUIV="refresh" CONTENT="60">
+        <style type="text/css">
+
+        body {
+
+
+
+        }
+
+        a:link, a:visited, a:active {
+            color: #00ff00;
+        }
+
+        </style>
     </head>
     <body>
 
@@ -49,38 +63,25 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <h1 class="panelHeader">Statistics</h1>
-                    <a href="/munin">
-                        <div class="panel status warning">
-                            munin
-                        </div>
-                    </a>
-
-                    <h1 class="panelHeader">Network status</h1>
-                    <a href="/cgi-bin/icinga/status.cgi">
-                        <div class="panel status danger">
-                            icinga
-                        </div>
-                    </a>
                     <a class="twitter-timeline" href="https://twitter.com/haxogreen" data-widget-id="495269387213869058">Tweets by @haxogreen</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+
+
                 </div>
                 <div class="col-md-8 netStats">
-                    <h1 class="panelHeader">Bandwidth usage</h1>
                     <a target="_blank" href="http://www.conostix.com/www/images/haxo/haxogreen.png">
                         <img id="bandwidth"src="http://www.conostix.com/www/images/haxo/haxogreen.png">
                     </a>
                 </div>
 
-                <div class="row">
 
-                    <div class="col-md-4 netStats">
-                        <h1 class="panelHeader">Train information</h1>
-                    </div>
+            </div>
 
+            <div class="row">
+
+                <div class="col-md-4 schedule">
                 </div>
-
 
             </div>
 
@@ -89,6 +90,35 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/level2.js"></script>
+    <script type="text/javascript">
+
+        !function ($) {
+
+            $(function(){
+
+                setInterval( function() {
+                    flicker();
+                }, 1);
+
+            });
+
+        }(window.jQuery);
+
+        function flicker() {
+
+            $('body').css('background-color', '#ff0000');
+
+            setTimeout(function() {
+
+                $('body').css('background-color', '#0000ff');
+
+             }, 100);
+
+        }
+
+
+
+    </script>
 
     </body>
 </html>
