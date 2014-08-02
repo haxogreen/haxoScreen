@@ -7,19 +7,20 @@
         }, 1000);
 
         refreshContent();
-
         setInterval( function() {
             refreshContent();
         }, 60000);
 
         loadWeather();
+        setInterval( function() {
+            loadWeather();
+        }, 10000);
 
         setInterval( function() {
             reloadPage();
         }, 10000);
 
         schedule();
-
         setInterval( function() {
             schedule();
         }, 60000);
